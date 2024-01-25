@@ -28,6 +28,13 @@ freely, subject to the following restrictions:
 
 #include <string.h> /*for size_t*/
 
+#ifdef USE_CONFIG_H
+#include "Config.h"
+#endif
+#ifndef TRACE_ERROR
+#define TRACE_ERROR(fmt, ...) fprintf(stderr, fmt "\n", __VA_ARGS__)
+#endif
+
 extern const char* LODEPNG_VERSION_STRING;
 
 /*
