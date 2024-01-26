@@ -20,7 +20,7 @@ public:
 	int getHeight() { return png.height; }
 
 #ifdef _MSC_VER
-	void draw(HDC hdc, int x = 0, int y = 0);
+	void draw(HDC hdc, int x = 0, int y = 0, int sX = 0, int sY = 0, int sW = 0, int sH = 0);
 #else
 	// TODO: other platforms
 #endif
