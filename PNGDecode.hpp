@@ -14,7 +14,7 @@ public:
 	explicit PNGDecode(const char* filename);
 	~PNGDecode();
 
-	operator bool() { return buffer != nullptr; }
+	bool isLoaded() { return buffer != nullptr; }
 
 	int getWidth() { return png.width; }
 	int getHeight() { return png.height; }

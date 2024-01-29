@@ -13,7 +13,7 @@ PNGDecode::PNGDecode(const char* filename)
 
 PNGDecode::~PNGDecode()
 {
-	if (this)
+	if (isLoaded())
 	{
 		free(buffer);
 	}
